@@ -1,0 +1,33 @@
+{
+  "name": "mymishka",
+  "version": "1.0.0",
+  "description": "Верстка учебного проекта",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doctorrsm/mymishka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doctorrsm/mymishka/issues"
+  },
+  "homepage": "https://github.com/doctorrsm/mymishka#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-html": "^3.5.0",
+    "gulp-html-bem-validator": "^1.0.5",
+    "gulp-nunjucks": "^5.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-w3c-html-validator": "^5.1.1",
+    "sass": "^1.47.0"
+  },
+  "engines": {
+    "node": "16.13.0"
+  },
+  "type": "module"
+}

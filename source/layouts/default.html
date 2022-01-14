@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% import "partials/data.html" as data %}
+<head>
+    {% block head %}
+
+    {% endblock %}
+</head>
+
+<body class="page">
+    <header class="page__header">
+        {% block header %}
+
+        {% endblock %}
+    </header>
+    <main class="page__main">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="page__footer">
+
+    </footer>
+</body>
+
+</html>
