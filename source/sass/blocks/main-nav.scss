@@ -1,0 +1,22 @@
+.main-nav {
+   @include list-reset;
+}
+
+.main-nav__item {
+   display: block;
+   padding: 0 30px;
+   border-bottom: 1px solid #ececec;
+}
+
+.main-nav__link {
+   display: flex;
+   padding: 29px 5px 27px 46px;
+   font-family: "Open Sans";
+   font-size: 17px;
+   font-style: normal;
+   font-weight: bold;
+   line-height: 24px;
+   letter-spacing: 0px;
+   color: #000000;
+   text-decoration: none;
+}

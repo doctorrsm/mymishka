@@ -8,19 +8,23 @@
 
 {% block header %}
 <nav class="navbar">
-   <a class="navbar__logo" href="#"></a>
+   <a class="navbar__logo" href="#">
+    <svg width="86" height="35" viewBox="0 0 86 35">
+      <use xlink:href="img/svg/sprite.svg#mishka-logo-mobile"></use>
+      </svg>
+   </a>
    <ul class="main-nav">
       {% for item in data.menu %}
       <li class="main-nav__item">
-         <a href="{{item.link}}">{{item.title}}</a>
+         <a class="main-nav__link" href="{{item.link}}">{{item.title}}</a>
       </li>{% endfor %}
    </ul>
    <button class="navbar__close-button" type="button">
       <span>Закрыть</span>
    </button>
-   <div class="navbar__card card">
-      <a class="card__link" href="#">
-         <span class="card__text">Корзина: пока пуста</span>
+   <div class="navbar__card">
+      <a class="navbar__card-link" href="#">
+         <span class="navbar__card-text">Корзина: пока пуста</span>
       </a>
    </div>
 </nav>

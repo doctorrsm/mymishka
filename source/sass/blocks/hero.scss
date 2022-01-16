@@ -1,0 +1,14 @@
+.hero {
+
+  // TODO исправить высоту, добавить секцию для заголовка с картинкой.
+  min-height: 373px;
+}
+.hero__title {
+   font-style: normal;
+   font-family: "Open Sans", sans-serif;
+   font-size: 27px;
+   line-height: 30px;
+   font-weight: 700;
+   color: #000000;
+   text-align: center;
+}

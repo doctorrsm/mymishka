@@ -1,0 +1,39 @@
+.navbar {
+  position: relative;
+}
+
+.navbar__logo {
+  display: flex;
+  padding: 22px 30px;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.navbar__card {
+  padding: 0 30px;
+}
+
+.navbar__card-link {
+  text-decoration: none;
+}
+
+.navbar__card-text {
+  display: flex;
+  padding: 29px 5px 27px 46px;
+  font-family: "Open Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar__close-button{
+  @include button-reset;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

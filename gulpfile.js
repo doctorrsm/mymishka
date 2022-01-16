@@ -6,7 +6,10 @@ import {htmlValidator} from 'gulp-w3c-html-validator';
 import nunjucks from 'gulp-nunjucks';
 import gulpHtmlBemValidator from 'gulp-html-bem-validator';
 import beautify from 'gulp-beautify';
-import svgmin from 'gulp-svgmin';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import squoosh from 'gulp-libsquoosh';
+import rename from 'gulp-rename';
 
 const {
    src,
@@ -46,15 +49,30 @@ export function beauty() {
       }));
 }
 
+export function img() {
+  return src('./source/img/**/*.{jpg,png}')
+      .pipe(squoosh({
+        webp: {},
+        avif: {},
+      }))
+     .pipe(dest('./build/img'));
+}
+
 export function svg() {
    return src('./source/img/svg/*.svg')
-   .pipe(svgmin())
+   .pipe(svgo())
+   .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
    .pipe(dest('./build/img/svg/'));
 }
 
 export function watch() {
    gulp.watch('./source/**/*.html', njk);
    gulp.watch('./source/sass/**/*.scss', css);
+   gulp.watch('./source/**/*.svg', svg);
+   gulp.watch('./source/**/*.{jpg,png}', img);
 }
 
 export function validatehtml() {

@@ -1,2 +1,11 @@
+@import "mixins/mixins.scss";
+
+// common blocks
+@import "blocks/navbar";
+@import "blocks/main-nav";
 @import "blocks/button";
+
+
+// index.html blocks
+@import "blocks/hero";
 
