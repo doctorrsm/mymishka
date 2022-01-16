@@ -1,3 +1,5 @@
+ {% from "macros/image.html" import image %}
+{% from "macros/img.html" import img %}
 <!DOCTYPE html>
 <html lang="ru">
 {% import "partials/data.html" as data %}
@@ -18,7 +20,8 @@
         {% endblock %}
     </main>
     <footer class="page__footer">
-
+      {% block footer %}
+        {% endblock %}
     </footer>
 </body>
 

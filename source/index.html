@@ -1,5 +1,5 @@
-{% set username = "Главная страница" %}
-{% set pageName = "index" %}
+{% set username="Главная страница" %}
+{% set pageName="index" %}
 {% extends "layouts/default.html" %}
 
 {% block head %}
@@ -7,52 +7,110 @@
 {% endblock %}
 
 {% block header %}
-
 <nav class="navbar">
-    <a class="navbar__logo" href="#"></a>
-    <ul class="main-nav">
-        {% for item in data.menu %}
-        <li class="main-nav__item">
-            <a href="{{item.link}}">{{item.title}}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    <button class="navbar__close-button" type="button"><span>Закрыть</span></button>
-    <div class="navbar__card card">
-       <a class="card__link" href="#">
-           <span class="card__text">Корзина: пока пуста</span>
-       </a>
-    </div>
+   <a class="navbar__logo" href="#"></a>
+   <ul class="main-nav">
+      {% for item in data.menu %}
+      <li class="main-nav__item">
+         <a href="{{item.link}}">{{item.title}}</a>
+      </li>{% endfor %}
+   </ul>
+   <button class="navbar__close-button" type="button">
+      <span>Закрыть</span>
+   </button>
+   <div class="navbar__card card">
+      <a class="card__link" href="#">
+         <span class="card__text">Корзина: пока пуста</span>
+      </a>
+   </div>
 </nav>
+{% endblock %}
+{% block content %}
+<section class="hero">
+   <h1 class="hero__title">Милые штуки ручной работы для дома</h1>
+   <ul class="hero__categories">
+      <li class="hero__categories-item">
+         <a class="hero__categories-link" href="#">Предметы интерьера</a>
+      </li>
+      <li class="hero__categories-item">
+         <a class="hero__categories-link" href="#">Детские игрушки</a>
+      </li>
+   </ul>
+</section>
+<section class="special-product">
+   <h2 class="special-product__title">Вязаные корзинки</h2>
+   <span class="special-product__label">Товар недели</span>
+   <div class="special-product__text-wrapper">
+      <p class="special-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+      <span>ЦенаЖ 990 руб.</span>
+      <a class="special-product__order-button button" href="#">Заказать</a>
+   </div>
+   <div class="special-product__image-wrapper">
+      {{ img("img/site/hero", "800", "600", "Альтернативный текст.") }}
+
+   </div>
+</section>
+<section class="about-us">
+   <ul class="about-us__features-list">
+      <li class="abou-us__features-item">
+         <p>Экологически чистые материалы</p>
+      </li>
+      <li class="abou-us__features-item">
+         <p>Скандинавский стиль по российской цене</p>
+      </li>
+      <li class="abou-us__features-item">
+         <p>Увеличивает лайки на фотографиях</p>
+      </li>
+      <li class="abou-us__features-item">
+         <p>Связано вручную с любовью и умилением</p>
+      </li>
+      <li class="abou-us__features-item">
+         <p>Поддержка отечественного производителя</p>
+      </li>
+      <li class="abou-us__features-item">
+         <p>Поставляется в ручной упаковке</p>
+      </li>
+   </ul>
+</section>
+<section class="reviews slider">
+   <h2 class="reviews__title">Отзывы</h2>
+   <div class="reviews__list">
+      <p class="reviews__item">
+         <blockquote>
+            <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <footer>
+               <span>Анастасия Красильникова</span>
+               <span>@misssssiskras</span>
+            </footer>
+         </blockquote>
+      </p>
+   </div>
+   <div class="slider__control">
+      <button type="button">
+         <span class="visually-hidden">Предыдущий слайдер</span>
+         <span class="visually-hidden">Следующий слайдер</span>
+      </button>
+   </div>
+   <a href="#" class="reviews__button">Написать</a>
+</section>
+<section class="contacts">
+   <h2 class="contacts__title">Контакты</h2>
+   <address>
+      <p>
+         <span>e-mail:</span>
+         <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+      </p>
+      <p>
+         <span>адрес:</span>
+         <span>г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</span>
+      </p>
+   </address>
+   <section class="map"></section>
+   <a class="contacts__call-to-action-button" href="#">Напишите нам</a>
+</section>
 
 {% endblock %}
 
-{% block content %}
-<section class="hero">
-    <h1 class="hero__title">Милые штуки ручной работы для дома</h1>
-    <ul class="hero__categories">
-        <li class="hero__categories-item">
-            <a class="hero__categories-link" href="#">Предметы интерьера</a>
-        </li>
-        <li class="hero__categories-item">
-            <a class="hero__categories-link" href="#">Детские игрушки</a>
-        </li>
-    </ul>
-</section>
-<section class="special-product">
-    <h2 class="special-product__title">Вязаные корзинки</h2>
-    <span class="special-product__label">Товар недели</span>
-    <div class="special-product__text-wrapper">
-        <p class="special-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-        <span>ЦенаЖ 990 руб.</span>
-        <a class="special-product__order-button" href="#">Заказать</a>
-    </div>
-    <div class="special-product__image-wrapper">
-
-    </div>
-
-
-</section>
-
-
+{% block footer %}
+  {% include "partials/footer.html" %}
 {% endblock %}
