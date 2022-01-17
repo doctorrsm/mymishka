@@ -12,6 +12,10 @@
 
 .navbar__card {
   padding: 0 30px;
+
+  @media (max-width: $screen-mobile) {
+   display: none;
+  }
 }
 
 .navbar__card-link {

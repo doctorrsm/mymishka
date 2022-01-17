@@ -1,5 +1,10 @@
 .special-product {
    display: block;
+   padding-top: 32px;
+   padding-bottom: 52px;
+   background-repeat: repeat-x;
+   background-image: url("../img/svg/border-wave-slim.svg");
+   background-position: left 8px bottom 10px;
 }
 
 .special-product__title {
@@ -15,8 +20,8 @@
 }
 
 .special-product__description {
-   margin-top: 18px;
-   margin-bottom: 28px;
+   margin-top: 15px;
+   margin-bottom: 21px;
 }
 
 .special-product__label {
@@ -40,11 +45,12 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 25px;
+   padding: 21px 10px 23px;
 }
 
 .special-product__characters {
    line-height: 20px;
+   margin-bottom: 27px;
 
    dt {
       min-width: 97px;

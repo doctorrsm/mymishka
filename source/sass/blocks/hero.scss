@@ -4,9 +4,9 @@
 }
 
 .hero__title-wrapper {
-   min-height: 373px;
+   min-height: 281px;
    text-align: center;
-   padding-top: 73px;
+   padding-top: 71px;
    background-image: url("../img/bg/hero-mobile.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -21,11 +21,13 @@
    font-weight: 700;
    color: #000000;
    text-align: center;
+   margin: 0 auto;
+   width: 96%;
 }
 
 .hero__categories {
    @include list-reset;
-
+  margin: 0 -30px;
 }
 
 .hero__categories-item:nth-child(odd) {
@@ -46,6 +48,17 @@
    text-align: left;
    color: var(--white);
    display: block;
-   padding: 24px 30px 31px;
+   padding: 24px 30px 31px 30px;
+   background-repeat: no-repeat;
+   background-position: top 23px right 36px;
+}
+
+.hero__categories-link--interior-bg {
+  background-image: url("../img/svg/interior.svg");
+}
+
+.hero__categories-link--toy-bg {
+  background-image: url("../img/svg/toy-svg.svg");
+  background-position: top 23px right 28px;
 }
 

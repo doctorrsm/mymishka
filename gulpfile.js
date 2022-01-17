@@ -76,10 +76,17 @@ export function svg() {
    .pipe(dest('./build/img/svg/'));
 }
 
+export function svgcopy() {
+  return src('./source/img/svg/*.svg')
+  .pipe(svgo())
+  .pipe(dest('./build/img/svg/'));
+}
+
 export function watch() {
    gulp.watch('./source/**/*.html', njk);
    gulp.watch('./source/sass/**/*.scss', css);
    gulp.watch('./source/**/*.svg', svg);
+   gulp.watch('./source/**/*.svg', svgcopy);
    gulp.watch('./source/**/*.{jpg,png}', img);
    gulp.watch('./source/**/*.{jpg,png}', webp);
 }

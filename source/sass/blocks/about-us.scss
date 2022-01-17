@@ -10,13 +10,39 @@
    text-align: left;
 }
 
-.about-us__features-list {
+.about-us__list {
   @include list-reset;
 }
 
-.about-us__features-item {
+.about-us__item {
    font-style: normal;
    font-weight: 700;
    font-size: 17px;
    line-height: 20px;
+   padding-top: 48px;
+   background-repeat: no-repeat;
+
+   &--flower {
+     background-image: url("../img/svg/icon-flower.svg");
+   }
+
+   &--money {
+    background-image: url("../img/svg/icon-money.svg");
+   }
+
+   &--heart {
+    background-image: url("../img/svg/icon-heart.svg");
+   }
+
+   &--ball {
+    background-image: url("../img/svg/icon-ball.svg");
+   }
+
+   &--rocket {
+    background-image: url("../img/svg/icon-rocket.svg");
+   }
+
+   &--gift {
+    background-image: url("../img/svg/icon-gift.svg");
+   }
 }
