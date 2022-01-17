@@ -1,0 +1,22 @@
+.about-us {
+   color: var(--black);
+}
+
+.about-us__title {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 25px;
+   line-height: 30px;
+   text-align: left;
+}
+
+.about-us__features-list {
+  @include list-reset;
+}
+
+.about-us__features-item {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 17px;
+   line-height: 20px;
+}

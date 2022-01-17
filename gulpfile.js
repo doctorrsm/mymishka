@@ -58,6 +58,14 @@ export function img() {
      .pipe(dest('./build/img'));
 }
 
+export function webp() {
+  return src('./source/img/**/*.{jpg,png}')
+      .pipe(squoosh({
+        webp: {},
+        avif: {},
+      }))
+     .pipe(dest('./build/img'));
+}
 export function svg() {
    return src('./source/img/svg/*.svg')
    .pipe(svgo())
@@ -73,6 +81,7 @@ export function watch() {
    gulp.watch('./source/sass/**/*.scss', css);
    gulp.watch('./source/**/*.svg', svg);
    gulp.watch('./source/**/*.{jpg,png}', img);
+   gulp.watch('./source/**/*.{jpg,png}', webp);
 }
 
 export function validatehtml() {
@@ -80,3 +89,6 @@ export function validatehtml() {
       .pipe(htmlValidator.analyzer())
       .pipe(htmlValidator.reporter());
 }
+
+
+
