@@ -1,0 +1,11 @@
+.page {
+   margin: 0;
+   padding: 0;
+   font-family: var(--font-family-primary);
+   font-style: normal;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 24px;
+   color: var(--dark);
+// ! TODO удолить фонт-фэмили в других блоках, так как шрифт общий один и наследуется от BODY
+}

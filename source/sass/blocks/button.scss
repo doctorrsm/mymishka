@@ -1,3 +1,30 @@
 .button {
-  display: flex;
+   display: flex;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 20px;
+   text-align: center;
+   text-transform: uppercase;
+   color: var(--dark);
+   justify-content: center;
+   align-items: center;
+   border: 2px solid var(--dark);
+   min-height: 52px;
+
+   &:hover,
+   &:focus {
+      color: var(--white);
+      background-color: var(--dark);
+   }
+
+   &:focus {
+     outline: 1px dashed var(--white);
+     outline-offset: -3px;
+   }
+
+   &:active {
+     color: #7c7c7c;
+     outline: none;
+   }
 }

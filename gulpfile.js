@@ -52,8 +52,8 @@ export function beauty() {
 export function img() {
   return src('./source/img/**/*.{jpg,png}')
       .pipe(squoosh({
-        webp: {},
-        avif: {},
+        //webp: {},
+        //avif: {},
       }))
      .pipe(dest('./build/img'));
 }

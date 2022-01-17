@@ -31,7 +31,9 @@
 {% endblock %}
 {% block content %}
 <section class="hero">
-   <h1 class="hero__title">Милые штуки ручной работы для дома</h1>
+    <div class="hero__title-wrapper">
+      <h1>Милые штуки ручной работы для дома</h1>
+    </div>
    <ul class="hero__categories">
       <li class="hero__categories-item">
          <a class="hero__categories-link" href="#">Предметы интерьера</a>
@@ -42,16 +44,31 @@
    </ul>
 </section>
 <section class="special-product">
-   <h2 class="special-product__title">Вязаные корзинки</h2>
-   <span class="special-product__label">Товар недели</span>
-   <div class="special-product__text-wrapper">
-      <p class="special-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-      <span>ЦенаЖ 990 руб.</span>
-      <a class="special-product__order-button button" href="#">Заказать</a>
-   </div>
-   <div class="special-product__image-wrapper">
-      {{ img("img/site/hero", "800", "600", "Альтернативный текст.") }}
-
+   <div class="container">
+     <h2 class="special-product__title">Вязаные корзинки</h2>
+     <span class="special-product__label">Товар недели</span>
+     <div class="special-product__text-wrapper">
+        <p class="special-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+        <span class="special-product__price">Цена: 990 руб.</span>
+        <a class="special-product__order-button button" href="#">Заказать</a>
+        <dl class="special-product__characters">
+          <div class="special-product__characters-item">
+            <dt>Цвет</dt>
+            <dd>тиффани/серый</dd>
+          </div>
+          <div class="special-product__characters-item">
+            <dt>Диаметр</dt>
+            <dd>25 см</dd>
+          </div>
+          <div class="special-product__characters-item">
+            <dt>Высота</dt>
+            <dd>15 см</dd>
+          </div>
+        </dl>
+     </div>
+     <div class="special-product__image-wrapper">
+        {{ img("img/site/hero", "800", "600", "Альтернативный текст.") }}
+     </div>
    </div>
 </section>
 <section class="about-us">

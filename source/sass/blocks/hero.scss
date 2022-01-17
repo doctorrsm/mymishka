@@ -1,8 +1,15 @@
 .hero {
+   // TODO исправить высоту, добавить секцию для заголовка с картинкой.
 
-  // TODO исправить высоту, добавить секцию для заголовка с картинкой.
-  min-height: 373px;
 }
+
+.hero__title-wrapper {
+   min-height: 373px;
+   text-align: center;
+   padding-top: 73px;
+   background-image: url("../img/bg/hero-mobile.jpg");
+}
+
 .hero__title {
    font-style: normal;
    font-family: "Open Sans", sans-serif;
@@ -12,3 +19,30 @@
    color: #000000;
    text-align: center;
 }
+
+.hero__categories {
+   @include list-reset;
+
+}
+
+.hero__categories-item:nth-child(odd) {
+  background-color: var(--basic);
+}
+
+.hero__categories-item:nth-child(even) {
+  background-color: var(--basic-dark);
+}
+
+
+.hero__categories-link {
+   font-family: var(--font-family-primary);
+   font-style: normal;
+   font-weight: 700;
+   font-size: 19px;
+   line-height: 24px;
+   text-align: left;
+   color: var(--white);
+   display: block;
+   padding: 24px 30px 31px;
+}
+

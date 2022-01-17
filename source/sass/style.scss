@@ -1,6 +1,11 @@
-@import "mixins/mixins.scss";
+@import "variables/variables";
+@import "mixins/mixins";
+
+@import "global/global";
 
 // common blocks
+@import "blocks/page";
+@import "blocks/container";
 @import "blocks/navbar";
 @import "blocks/main-nav";
 @import "blocks/button";
@@ -8,4 +13,4 @@
 
 // index.html blocks
 @import "blocks/hero";
-
+@import "blocks/special-product";
