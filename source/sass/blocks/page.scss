@@ -9,3 +9,17 @@
    color: var(--dark);
 // ! TODO удолить фонт-фэмили в других блоках, так как шрифт общий один и наследуется от BODY
 }
+
+.page__footer {
+  background-color: var(--grey);
+}
+.page__footer-logo {
+
+  @media (max-width: $screen-mobile) {
+   display: none;
+  }
+
+  svg {
+
+  }
+}

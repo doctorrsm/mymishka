@@ -1,9 +1,12 @@
 .contacts {
+  padding-top: 28px;
+
   address {
     font-size: 14px;
     line-height: 30px;
     font-style: normal;
     font-weight: normal;
+    padding-bottom: 35px;
   }
 }
 
@@ -13,10 +16,12 @@
   line-height: 30px;
   color: var(--black);
   margin-top: 0;
+  margin-bottom: 28px;
 }
 
 .contacts__item {
   display: flex;
+  margin-bottom: 28px;
 }
 
 .contacts__item-head {
@@ -26,4 +31,13 @@
 .contacts__link {
   color: var(--dark);
   border-bottom: 1px solid var(--basic);
+}
+
+.contacts__map {
+  width: calc(100% + 60px);
+  margin: 0 -30px;
+}
+
+.contacts__call-to-action-button {
+  margin: 36px 0;
 }

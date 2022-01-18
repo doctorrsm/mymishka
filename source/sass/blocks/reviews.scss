@@ -1,3 +1,10 @@
+.reviews {
+  padding-bottom: 61px;
+  background-repeat: repeat-x;
+  background-image: url("../img/svg/border-wave-slim.svg");
+background-position: left 8px bottom 10px;
+}
+
 .reviews__title {
   font-style: normal;
   font-weight: 700;
@@ -11,6 +18,7 @@
 
 .reviews__list {
   @include list-reset;
+  margin-bottom: 29px;
 }
 
 .reviews__item {
