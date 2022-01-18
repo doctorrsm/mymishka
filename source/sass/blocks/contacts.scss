@@ -1,0 +1,29 @@
+.contacts {
+  address {
+    font-size: 14px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+.contacts__title {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: var(--black);
+  margin-top: 0;
+}
+
+.contacts__item {
+  display: flex;
+}
+
+.contacts__item-head {
+  width: 76px;
+}
+
+.contacts__link {
+  color: var(--dark);
+  border-bottom: 1px solid var(--basic);
+}

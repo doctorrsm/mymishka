@@ -1,29 +1,19 @@
- {% from "macros/image.html" import image %}
+{% from "macros/image.html" import image %}
 {% from "macros/img.html" import img %}
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    {% block head %}
-
-    {% endblock %}
-
-</head>
-
-<body class="page">
-    <header class="page__header">
-        {% block header %}
-
-        {% endblock %}
-    </header>
-    <main class="page__main">
-        {% block content %}
-        {% endblock %}
-    </main>
-    <footer class="page__footer">
-      {% block footer %}
-        {% endblock %}
-    </footer>
-</body>
-
+   <head>
+      {% block head %}{% endblock %}
+   </head>
+   <body class="page">
+      <header class="page__header">
+         {% block header %}{% endblock %}
+      </header>
+      <main class="page__main">
+         {% block content %}{% endblock %}
+      </main>
+      <footer class="page__footer">
+         {% block footer %}{% endblock %}
+      </footer>
+   </body>
 </html>

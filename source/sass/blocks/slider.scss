@@ -1,0 +1,22 @@
+.slider__control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slider__control-button {
+  @include button-reset;
+  display: flex;
+  height: 52px;
+  border: 1px solid var(--border);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider__control-button--preview  {
+  background-image: url("../img/svg/huge-arrow-left.svg");
+  border-right: none;
+}
+
+.slider__control-button--next  {
+  background-image: url("../img/svg/huge-arrow-right.svg");
+}

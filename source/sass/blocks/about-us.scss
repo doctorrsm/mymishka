@@ -1,13 +1,14 @@
 .about-us {
-   color: var(--black);
+  color: var(--black);
+  padding-bottom: 43px;
 }
 
 .about-us__title {
-   font-style: normal;
-   font-weight: 700;
-   font-size: 25px;
-   line-height: 30px;
-   text-align: left;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
 }
 
 .about-us__list {
@@ -15,34 +16,35 @@
 }
 
 .about-us__item {
-   font-style: normal;
-   font-weight: 700;
-   font-size: 17px;
-   line-height: 20px;
-   padding-top: 48px;
-   background-repeat: no-repeat;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  padding-top: 48px;
+  background-repeat: no-repeat;
+  background-position: 0 15px;
 
-   &--flower {
-     background-image: url("../img/svg/icon-flower.svg");
-   }
+  &--flower {
+    background-image: url("../img/svg/icon-flower.svg");
+  }
 
-   &--money {
+  &--money {
     background-image: url("../img/svg/icon-money.svg");
-   }
+  }
 
-   &--heart {
+  &--heart {
     background-image: url("../img/svg/icon-heart.svg");
-   }
+  }
 
-   &--ball {
+  &--ball {
     background-image: url("../img/svg/icon-ball.svg");
-   }
+  }
 
-   &--rocket {
+  &--rocket {
     background-image: url("../img/svg/icon-rocket.svg");
-   }
+  }
 
-   &--gift {
+  &--gift {
     background-image: url("../img/svg/icon-gift.svg");
-   }
+  }
 }
