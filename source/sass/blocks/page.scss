@@ -1,25 +1,40 @@
 .page {
-   margin: 0;
-   padding: 0;
-   font-family: var(--font-family-primary);
-   font-style: normal;
-   font-weight: 400;
-   font-size: 15px;
-   line-height: 24px;
-   color: var(--dark);
-// ! TODO удолить фонт-фэмили в других блоках, так как шрифт общий один и наследуется от BODY
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--dark);
+  // ! TODO удолить фонт-фэмили в других блоках, так как шрифт общий один и наследуется от BODY
+  // TODO сделать приклееный футер к низу
 }
 
 .page__footer {
   background-color: var(--grey);
+  padding-bottom: 21px;
 }
+
 .page__footer-logo {
 
   @media (max-width: $screen-mobile) {
-   display: none;
+    display: none;
   }
 
-  svg {
+  svg {}
+}
 
+.page__footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 18px;
+    color: var(--black);
+    margin-right: 28px;
   }
 }

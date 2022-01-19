@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/doctorrsm/mymishka#readme",
   "devDependencies": {
+    "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
     "gulp-beautify": "^3.0.0",
     "gulp-html": "^3.5.0",

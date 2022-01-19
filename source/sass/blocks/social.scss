@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0 27px;
+
+  @media (max-width: $screen-mobile) {
+   border-bottom: 1px solid var(--devider);
+   margin-bottom: 21px;
+  }
+}
+
+.social__link {
+  display: inline-flex;
+  padding: 0 20px;
+}

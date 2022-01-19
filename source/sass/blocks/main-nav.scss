@@ -2,6 +2,16 @@
    @include list-reset;
 }
 
+.main-nav {
+  @media (max-width: $screen-mobile) {
+    display: none;
+  }
+
+}
+
+.main-nav--visible {
+  display: block;
+}
 .main-nav__item {
    display: block;
    padding: 0 30px;
@@ -11,7 +21,6 @@
 .main-nav__link {
    display: flex;
    padding: 29px 5px 27px 46px;
-   font-family: "Open Sans";
    font-size: 17px;
    font-style: normal;
    font-weight: bold;
@@ -19,4 +28,12 @@
    letter-spacing: 0px;
    color: #000000;
    text-decoration: none;
+
+   &:hover, &:focus {
+     opacity: 0.6;
+   }
+
+   &:active {
+    opacity: 0.3;
+  }
 }

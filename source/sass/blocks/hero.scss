@@ -1,33 +1,38 @@
 .hero {
-   // TODO исправить высоту, добавить секцию для заголовка с картинкой.
-
+  // TODO исправить высоту, добавить секцию для заголовка с картинкой.
 }
 
 .hero__title-wrapper {
-   min-height: 281px;
-   text-align: center;
-   padding-top: 71px;
-   background-image: url("../img/bg/hero-mobile.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-  }
+  min-height: 281px;
+  text-align: center;
+  padding-top: 71px;
+  background-image: url("../img/bg/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .hero__title {
-   font-style: normal;
-   font-family: "Open Sans", sans-serif;
-   font-size: 27px;
-   line-height: 30px;
-   font-weight: 700;
-   color: #000000;
-   text-align: center;
-   margin: 0 auto;
-   width: 96%;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin: 0 auto;
+  width: 96%;
 }
 
 .hero__categories {
-   @include list-reset;
+  @include list-reset;
   margin: 0 -30px;
+
+  @media (min-width: $screen-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 -50px;
+  }
 }
 
 .hero__categories-item:nth-child(odd) {
@@ -38,19 +43,18 @@
   background-color: var(--basic-dark);
 }
 
-
 .hero__categories-link {
-   font-family: var(--font-family-primary);
-   font-style: normal;
-   font-weight: 700;
-   font-size: 19px;
-   line-height: 24px;
-   text-align: left;
-   color: var(--white);
-   display: block;
-   padding: 24px 30px 31px 30px;
-   background-repeat: no-repeat;
-   background-position: top 23px right 36px;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  text-align: left;
+  color: var(--white);
+  display: block;
+  padding: 24px 30px 31px 30px;
+  background-repeat: no-repeat;
+  background-position: top 23px right 36px;
 }
 
 .hero__categories-link--interior-bg {
@@ -61,4 +65,3 @@
   background-image: url("../img/svg/toy-svg.svg");
   background-position: top 23px right 28px;
 }
-

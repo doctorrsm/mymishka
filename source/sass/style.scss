@@ -4,7 +4,7 @@
 
 @import "global/global";
 
-// common blocks
+// common main blocks
 @import "blocks/page";
 @import "blocks/container";
 @import "blocks/navbar";
@@ -19,3 +19,6 @@
 @import "blocks/reviews";
 @import "blocks/slider";
 @import "blocks/contacts";
+
+// common footer blocks
+@import "blocks/social";
