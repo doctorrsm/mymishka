@@ -10,6 +10,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg/hero-mobile@2x.jpg");
+  }
+
 }
 
 .hero__title {
@@ -35,12 +40,22 @@
   }
 }
 
+.hero__categories-item {
+  position: relative;
+}
+
 .hero__categories-item:nth-child(odd) {
   background-color: var(--basic);
+  &:hover, &:focus, &:active {
+    background-color: #59d5bc;
+  }
 }
 
 .hero__categories-item:nth-child(even) {
   background-color: var(--basic-dark);
+  &:hover, &:focus, &:active {
+    background-color: #46c1ae;
+  }
 }
 
 .hero__categories-link {
@@ -55,13 +70,35 @@
   padding: 24px 30px 31px 30px;
   background-repeat: no-repeat;
   background-position: top 23px right 36px;
+
+  ~ svg {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:hover, &:focus {
+    ~ svg {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    ~ svg {
+      opacity: 0.3;
+    }
+  }
+
+
 }
 
 .hero__categories-link--interior-bg {
-  background-image: url("../img/svg/interior.svg");
+
 }
 
 .hero__categories-link--toy-bg {
-  background-image: url("../img/svg/toy-svg.svg");
-  background-position: top 23px right 28px;
+
 }

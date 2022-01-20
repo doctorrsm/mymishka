@@ -31,6 +31,14 @@
 .contacts__link {
   color: var(--dark);
   border-bottom: 1px solid var(--basic);
+
+  &:hover, &:focus {
+    color: var(--basic);
+  }
+
+  &:active {
+    border-color:#edf9f7;
+  }
 }
 
 .contacts__map {

@@ -1,0 +1,21 @@
+@mixin svg-navbar-icon {
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+
+   svg {
+    fill: var(--grey-light);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: var(--basic);
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}

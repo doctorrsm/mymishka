@@ -22,7 +22,19 @@
     display: none;
   }
 
-  svg {}
+  &:hover, &:focus {
+    svg {
+      fill: #46c1ae;
+    }
+
+  }
+
+  &:active {
+    svg {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
 }
 
 .page__footer-copyright {
@@ -36,5 +48,22 @@
     line-height: 18px;
     color: var(--black);
     margin-right: 28px;
+  }
+
+  svg {
+    fill: #63d1bb;
+  }
+
+  &:hover, &:focus {
+    svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #46c1ae;
+    opacity: 0.3;
+    }
   }
 }

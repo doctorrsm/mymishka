@@ -7,54 +7,7 @@
 {% endblock %}
 
 {% block header %}
-<nav class="navbar">
-  <div class="navbar__container container">
-    <div class="navbar__main-nav-wrapper">
-      <a class="navbar__logo" href="#" aria-label="Логотип магазина Мишка." role="banner">
-        <svg class="navbar__logo-mobile" width="86" height="35" viewBox="0 0 86 35">
-          <use xlink:href="img/svg/sprite.svg#mishka-logo-mobile"></use>
-        </svg>
-        <svg class="navbar__logo-tablet" width="114" height="46" viewBox="0 0 114 46">
-          <use xlink:href="img/svg/sprite.svg#mishka-logo-tablet"></use>
-        </svg>
-        <svg class="navbar__logo-desktop" width="149" height="72" viewBox="0 0 149 72">
-          <use xlink:href="img/svg/sprite.svg#mishka-logo-desktop"></use>
-        </svg>
-      </a>
-      <ul class="main-nav">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог товаров</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Вязание на заказ</a>
-        </li>
-      </ul>
-      <button class="navbar__close-button" type="button">
-        <span class="visually-hidden">Нажмите для доступа к меню.</span>
-      </button>
-    </div>
-    <ul class="navbar__links-wrapper">
-      <li class="navbar__links-item">
-        <button class="navbar__search-button" type="button">
-          <span class="visually-hidden">Поиск по сайту</span>
-        </button>
-        <a class="navbar__search-link" href="#">Поиск по сайту</a>
-      </li>
-      <li class="navbar__links-item navbar__card">
-        <button class="navbar__card-button" type="button">
-          <span class="visually-hidden">Показать содержимое корзины</span>
-        </button>
-        <a class="navbar__card-link" href="#">
-          <span class="navbar__card-text">Корзина: пока пуста</span>
-        </a>
-      </li>
-    </ul>
-    <div>
-
-      <p class="navbar__text-about-delivery">Бесплатная доставка по России</p>
-    </div>
-  </div>
-</nav>
+{% include "partials/header.html" %}
 {% endblock %}
 {% block content %}
 <section class="hero">
@@ -67,10 +20,17 @@
       <li class="hero__categories-item">
         <a class="hero__categories-link hero__categories-link--interior-bg" href="#">Предметы
           <br aria-hidden="true"> интерьера</a>
+        <svg width="40" height="62" viewBox="0 0 40 62" >
+          <use xlink:href="img/svg/sprite.svg#interior"></use>
+          <!-- TODO сделать иокноки недоступными для ариа-ридера -->
+        </svg>
       </li>
       <li class="hero__categories-item">
         <a class="hero__categories-link hero__categories-link--toy-bg" href="#">Детские
           <br> игрушки</a>
+        <svg width="60" height="60" viewBox="0 0 60 60">
+          <use xlink:href="img/svg/sprite.svg#toy-svg"></use>
+        </svg>
       </li>
     </ul>
   </div>

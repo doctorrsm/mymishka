@@ -14,4 +14,21 @@
 .social__link {
   display: inline-flex;
   padding: 0 20px;
+
+  svg {
+    fill: #231f20;
+  }
+
+  &:hover, &:focus {
+    svg {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    svg  {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
 }

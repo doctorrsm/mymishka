@@ -11,6 +11,20 @@
   border: 1px solid var(--border);
   background-repeat: no-repeat;
   background-position: center;
+
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    border: 1px solid var(--basic);
+  }
+
+  &:active {
+    outline: none;
+    border-color: var(--border);
+    opacity: 0.3;
+  }
 }
 
 .slider__control-button--preview  {
