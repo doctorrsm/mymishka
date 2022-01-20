@@ -15,6 +15,10 @@
     background-image: url("../img/bg/hero-mobile@2x.jpg");
   }
 
+  @media (min-width: $screen-tablet) {
+    min-height: 627px;
+  }
+
 }
 
 .hero__title {
@@ -27,6 +31,11 @@
   text-align: center;
   margin: 0 auto;
   width: 96%;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .hero__categories {
@@ -37,6 +46,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 -50px;
+
   }
 }
 

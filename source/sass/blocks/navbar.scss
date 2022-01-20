@@ -9,13 +9,11 @@
 
   @media (min-width: $screen-tablet) {
     display: grid;
-    grid-template-columns: 48% 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.navbar__main-nav-wrapper {
-
-}
+.navbar__main-nav-wrapper {}
 
 .navbar__logo {
   display: flex;
@@ -25,7 +23,9 @@
   border-bottom: 1px solid var(--border);
 
   @media (min-width: $screen-tablet) {
-  justify-content: flex-start;
+    justify-content: flex-start;
+    padding-left: 0;
+    border: none;
   }
 
   &:hover {
@@ -82,8 +82,9 @@
   }
 
   @media (min-width: $screen-tablet) {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 
@@ -97,16 +98,21 @@
   border-bottom: 1px solid var(--border);
 
   @media (min-width: $screen-tablet) {
-    border:none;
+    border: none;
+    border-left: 1px solid var(--border);
+    padding: 0;
   }
 }
 
 .navbar__links-item--search {
   position: relative;
+
+  @media (min-width: $screen-tablet) {
+    margin-left: -13px;
+  }
 }
 
 .navbar__search-link {
-
   display: flex;
   padding: 29px 5px 27px 46px;
 
@@ -128,21 +134,45 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $screen-tablet) {
+    padding: 36px 31px 34px 33px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .navbar__search-link {
   @include svg-navbar-icon;
   position: relative;
+
   svg {
     left: 0;
+
+    @media (min-width: $screen-tablet) {
+      position: static;
+      transform: initial;
+      display: inline-flex;
+    }
+  }
+
+  @media (min-width: $screen-tablet) {
+    span {
+      @include visually-hidden;
+    }
   }
 }
 
 .navbar__cart {
   position: relative;
+
+  @media (min-width: $screen-tablet) {
+    flex-grow: 1;
+  }
 }
 
 .navbar__cart-link {
+  position: relative;
   display: block;
 
   @include svg-navbar-icon;
@@ -155,6 +185,21 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0 32px;
+
+    svg {
+      display: inline-flex;
+      transform: initial;
+      position: static;
+      margin-left: 32px;
+    }
+  }
+
 }
 
 .navbar__cart-button {
@@ -173,6 +218,10 @@
   letter-spacing: 0px;
   color: #000000;
   text-decoration: none;
+
+  @media (min-width: $screen-tablet) {
+    padding: 0;
+  }
 }
 
 .navbar__close-button {
@@ -215,5 +264,15 @@
 
   @media (max-width: $screen-mobile) {
     display: none;
+  }
+
+  @media (min-width: $screen-tablet) {
+   width: 100%;
+   text-align: right;
+   padding-top: 10px;
+   border-left: none;
+   p {
+     margin: 0;
+   }
   }
 }

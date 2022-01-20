@@ -90,7 +90,7 @@ export function js() {
 
 export function watch() {
   gulp.watch('./source/**/*.html', series(njk, reload));
-  gulp.watch('./source/sass/**/*.scss', series(сыы, reload));
+  gulp.watch('./source/sass/**/*.scss', series(css, reload));
   gulp.watch('./source/js/*.js', js);
   gulp.watch('./source/**/*.svg', series(svg, svgcopy));
   gulp.watch('./source/**/*.{jpg,png}', series(img, webp));
