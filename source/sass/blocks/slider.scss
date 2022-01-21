@@ -1,7 +1,18 @@
+.slider {
+  display: block;
+}
+
 .slider__control {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 38px;
+
+  @media (min-width: $screen-tablet) {
+    position: absolute;
+    width: 180px;
+    bottom: -37px;
+    right: 50px;
+  }
 }
 
 .slider__control-button {
@@ -12,7 +23,8 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -25,13 +37,25 @@
     border-color: var(--border);
     opacity: 0.3;
   }
+
+  @media (min-width: $screen-tablet) {
+    border-color: transparent;
+
+    &:focus {
+      outline: 2px solid var(--basic);
+    }
+
+    &:active {
+      outline: none;
+    }
+  }
 }
 
-.slider__control-button--preview  {
+.slider__control-button--preview {
   background-image: url("../img/svg/huge-arrow-left.svg");
   border-right: none;
 }
 
-.slider__control-button--next  {
+.slider__control-button--next {
   background-image: url("../img/svg/huge-arrow-right.svg");
 }

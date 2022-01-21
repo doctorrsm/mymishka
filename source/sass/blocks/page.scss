@@ -11,6 +11,14 @@
   // TODO сделать приклееный футер к низу
 }
 
+.page__main {
+  @media (min-width: $screen-tablet) {
+    border-top: 1px solid var(--border);
+    margin-top: -55px;
+  }
+}
+
+
 .page__footer {
   background-color: var(--grey);
   padding-bottom: 21px;
@@ -22,7 +30,8 @@
     display: none;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     svg {
       fill: #46c1ae;
     }
@@ -54,7 +63,8 @@
     fill: #63d1bb;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     svg {
       fill: #46c1ae;
     }
@@ -63,7 +73,7 @@
   &:active {
     svg {
       fill: #46c1ae;
-    opacity: 0.3;
+      opacity: 0.3;
     }
   }
 }

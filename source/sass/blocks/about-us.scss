@@ -1,6 +1,11 @@
 .about-us {
   color: var(--black);
   padding-bottom: 43px;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 12px;
+    padding-bottom: 62px;
+  }
 }
 
 .about-us__title {
@@ -9,10 +14,21 @@
   font-size: 25px;
   line-height: 30px;
   text-align: left;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .about-us__list {
   @include list-reset;
+
+  @media (min-width: $screen-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
 }
 
 .about-us__item {
@@ -23,6 +39,12 @@
   padding-top: 48px;
   background-repeat: no-repeat;
   background-position: 0 15px;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 41px;
+  }
 
   &--flower {
     background-image: url("../img/svg/icon-flower.svg");

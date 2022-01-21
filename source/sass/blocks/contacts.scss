@@ -17,6 +17,11 @@
   color: var(--black);
   margin-top: 0;
   margin-bottom: 28px;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .contacts__item {
@@ -32,12 +37,13 @@
   color: var(--dark);
   border-bottom: 1px solid var(--basic);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--basic);
   }
 
   &:active {
-    border-color:#edf9f7;
+    border-color: #edf9f7;
   }
 }
 
