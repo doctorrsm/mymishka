@@ -10,7 +10,8 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import squoosh from 'gulp-libsquoosh';
 import rename from 'gulp-rename';
-import browser from 'browser-sync'
+import browser from 'browser-sync';
+import gulpStylelint from 'gulp-stylelint';
 
 const {
   src,
@@ -27,6 +28,15 @@ export function validate() {
     .pipe(htmlValidator.reporter());
 
 };
+
+export function stylelint() {
+  return src('./source/sass/**/*.scss')
+  .pipe(gulpStylelint({
+    reporters: [
+      {formatter: 'string', console: true, fix: true}
+    ]
+  }));
+}
 
 export function css() {
   return src('./source/sass/style.scss')

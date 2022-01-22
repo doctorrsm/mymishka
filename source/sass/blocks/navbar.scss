@@ -11,9 +11,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  @media (min-width: $screen-desktop) {
+    grid-template-columns: 4/6*100% 1fr;
+  }
 }
 
-.navbar__main-nav-wrapper {}
+.navbar__main-nav-wrapper {
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
 
 .navbar__logo {
   display: flex;
@@ -109,6 +119,10 @@
 
   @media (min-width: $screen-tablet) {
     margin-left: -13px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-left: 0;
   }
 }
 
@@ -267,12 +281,13 @@
   }
 
   @media (min-width: $screen-tablet) {
-   width: 100%;
-   text-align: right;
-   padding-top: 10px;
-   border-left: none;
-   p {
-     margin: 0;
-   }
+    width: 100%;
+    text-align: right;
+    padding-top: 10px;
+    border-left: none;
+
+    p {
+      margin: 0;
+    }
   }
 }

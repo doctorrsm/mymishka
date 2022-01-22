@@ -15,6 +15,7 @@
 .main-nav--visible {
   display: block;
 }
+
 .main-nav__item {
    display: block;
    padding: 0 30px;
@@ -24,6 +25,12 @@
   padding: 0;
   border: none;
    }
+}
+
+.main-nav__item--desk-visible {
+  @media (max-width: ($screen-desktop - 1px)) {
+   @include visually-hidden;
+  }
 }
 
 .main-nav__link {

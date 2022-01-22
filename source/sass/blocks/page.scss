@@ -8,7 +8,9 @@
   line-height: 24px;
   color: var(--dark);
   // ! TODO удолить фонт-фэмили в других блоках, так как шрифт общий один и наследуется от BODY
-  // TODO сделать приклееный футер к низу
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
 }
 
 .page__main {
