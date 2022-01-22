@@ -22,12 +22,28 @@
 .page__footer {
   background-color: var(--grey);
   padding-bottom: 21px;
+
+  @media (min-width: $screen-tablet) {
+    padding: 30px 0 33px;
+  }
+}
+
+.page__footer-grid {
+  @media (min-width: $screen-tablet) {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 10px;
+  }
 }
 
 .page__footer-logo {
 
   @media (max-width: $screen-mobile) {
     display: none;
+  }
+
+  @media (min-width: $screen-tablet) {
+    align-self: center;
   }
 
   &:hover,

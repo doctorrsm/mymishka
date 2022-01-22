@@ -7,7 +7,32 @@
     font-style: normal;
     font-weight: normal;
     padding-bottom: 35px;
+
+    @media (min-width: $screen-tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      font-size: 17px;
+      padding-bottom: 21px;
+    }
   }
+
+}
+
+.contacts__grid {
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__flag-bg-icon {
+  @media (min-width: $screen-tablet) {
+    background-repeat: no-repeat;
+    background-image: url("../img/svg/flag.svg");
+    background-position: top 8px right 53px;
+  }
+
 }
 
 .contacts__title {
@@ -21,6 +46,8 @@
   @media (min-width: $screen-tablet) {
     font-size: 43px;
     line-height: 50px;
+    padding-top: 30px;
+    margin-bottom: 32px;
   }
 }
 
@@ -50,8 +77,19 @@
 .contacts__map {
   width: calc(100% + 60px);
   margin: 0 -30px;
+
+  @media (min-width: $screen-tablet) {
+    width: calc(100% + 100px);
+    margin: 0 -50px;
+  }
 }
 
 .contacts__call-to-action-button {
   margin: 36px 0 39px;
+
+  @media (min-width: $screen-tablet) {
+    display: inline-flex;
+    margin: 58px auto 57px;
+    padding: 5px 39px;
+  }
 }
