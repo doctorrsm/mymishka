@@ -33,7 +33,7 @@ export function stylelint() {
   return src('./source/sass/**/*.scss')
   .pipe(gulpStylelint({
     reporters: [
-      {formatter: 'string', console: true, fix: true}
+      {formatter: 'string', console: true}
     ]
   }));
 }

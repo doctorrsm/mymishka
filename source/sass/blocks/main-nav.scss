@@ -1,5 +1,5 @@
 .main-nav {
-   @include list-reset;
+  @include list-reset;
 
   @media (max-width: $screen-mobile) {
     display: none;
@@ -8,8 +8,8 @@
   @media (min-width: $screen-tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
   }
-
 }
 
 .main-nav--visible {
@@ -17,44 +17,53 @@
 }
 
 .main-nav__item {
-   display: block;
-   padding: 0 30px;
-   border-bottom: 1px solid #ececec;
+  display: block;
+  padding: 0 30px;
+  border-bottom: 1px solid #ececec;
 
-   @media (min-width: $screen-tablet) {
-  padding: 0;
-  border: none;
-   }
+  @media (min-width: $screen-tablet) {
+    padding: 0;
+    border: none;
+  }
+
+  &:nth-child(1) .main-nav__link,
+  &:nth-child(2) .main-nav__link {
+    @media (min-width: $screen-desktop) {
+      font-size: 17px;
+      padding: 32px 0 34px;
+    }
+  }
 }
 
 .main-nav__item--desk-visible {
   @media (max-width: ($screen-desktop - 1px)) {
-   @include visually-hidden;
+    @include visually-hidden;
   }
 }
 
 .main-nav__link {
-   display: flex;
-   padding: 29px 5px 27px 46px;
-   font-size: 17px;
-   font-style: normal;
-   font-weight: bold;
-   line-height: 24px;
-   letter-spacing: 0px;
-   color: #000000;
-   text-decoration: none;
+  display: flex;
+  padding: 29px 5px 27px 46px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #000000;
+  text-decoration: none;
 
-   @media (min-width: $screen-tablet) {
-      padding: 19px 0 10px;
-      font-size: 15px;
-      line-height: 24px;
-   }
+  @media (min-width: $screen-tablet) {
+    padding: 19px 0 10px;
+    font-size: 15px;
+    line-height: 24px;
+  }
 
-   &:hover, &:focus {
-     opacity: 0.6;
-   }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-   &:active {
+  &:active {
     opacity: 0.3;
   }
 }

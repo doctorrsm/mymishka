@@ -6,8 +6,8 @@
   padding: 25px 0 27px;
 
   @media (max-width: $screen-mobile) {
-   border-bottom: 1px solid var(--devider);
-   margin-bottom: 21px;
+    border-bottom: 1px solid var(--devider);
+    margin-bottom: 21px;
   }
 }
 
@@ -19,14 +19,15 @@
     fill: #231f20;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     svg {
       fill: #46c1ae;
     }
   }
 
   &:active {
-    svg  {
+    svg {
       fill: #46c1ae;
       opacity: 0.3;
     }
