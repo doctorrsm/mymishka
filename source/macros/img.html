@@ -1,12 +1,12 @@
 {% macro img(url, width, height, alt) %}
 <picture>
-  <source type="image/avif" media="(min-width: 1200px)" srcset="{{ url }}-desktop.avif 1x, {{ url }}-desktop@2x.avif 2x">
+  <source type="image/avif" media="(min-width: 1150px)" srcset="{{ url }}-desktop.avif 1x, {{ url }}-desktop@2x.avif 2x">
   <source type="image/avif" media="(min-width: 768px)" srcset="{{ url }}-tablet.avif 1x, {{ url }}-tablet@2x.avif 2x">
   <source type="image/avif" srcset="{{ url }}-mobile.avif 1x, {{ url }}-mobile@2x.avif 2x">
-  <source type="image/webp" media="(min-width: 1200px)" srcset="{{ url }}-desktop.webp 1x, {{ url }}-desktop@2x.webp 2x">
+  <source type="image/webp" media="(min-width: 1150px)" srcset="{{ url }}-desktop.webp 1x, {{ url }}-desktop@2x.webp 2x">
   <source type="image/webp" media="(min-width: 768px)" srcset="{{ url }}-tablet.webp 1x, {{ url }}-tablet@2x.webp 2x">
   <source type="image/webp" srcset="{{ url }}-mobile.webp 1x, {{ url }}-mobile@2x.webp 2x">
-  <source media="(min-width: 1280px)" srcset="{{ url }}-desktop.jpg 1x, {{ url }}-desktop@2x.jpg 2x">
+  <source media="(min-width: 1150px)" srcset="{{ url }}-desktop.jpg 1x, {{ url }}-desktop@2x.jpg 2x">
   <source media="(min-width: 768px)" srcset="{{ url }}-tablet.jpg 1x, {{ url }}-tablet@2x.jpg 2x">
   <img class="curtain__cat curtain__cat--before" src="{{ url }}-mobile.jpg" srcset="{{ url }}-mobile.jpg 1x, {{ url }}-mobile@2x.jpg 2x" alt="{{ alt }}">
 

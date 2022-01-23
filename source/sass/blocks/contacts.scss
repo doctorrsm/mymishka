@@ -1,6 +1,12 @@
 .contacts {
   padding-top: 28px;
 
+  @include outline;
+
+  @media (min-width: $screen-desktop) {
+    padding-bottom: 105px;
+  }
+
   address {
     font-size: 14px;
     line-height: 30px;
@@ -15,6 +21,12 @@
       font-size: 17px;
       padding-bottom: 21px;
     }
+
+    @media (min-width: $screen-desktop) {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+    }
   }
 }
 
@@ -23,6 +35,13 @@
     display: flex;
     flex-direction: column;
   }
+
+  @media (min-width: $screen-desktop) {
+    display: grid;
+    padding-left: 225px;
+    grid-template-columns: 1fr 527px;
+    padding-top: 36px;
+  }
 }
 
 .contacts__flag-bg-icon {
@@ -30,6 +49,10 @@
     background-repeat: no-repeat;
     background-image: url("../img/svg/flag.svg");
     background-position: top 8px right 53px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    background-position: left 112px top 99px;
   }
 }
 
@@ -47,11 +70,22 @@
     padding-top: 30px;
     margin-bottom: 32px;
   }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 79px;
+    margin-bottom: 15px;
+  }
 }
 
 .contacts__item {
   display: flex;
   margin-bottom: 28px;
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 3px;
+  }
 }
 
 .contacts__item-head {
@@ -80,6 +114,14 @@
     width: calc(100% + 100px);
     margin: 0 -50px;
   }
+
+  @media (min-width: $screen-desktop) {
+    margin: 0;
+    width: 527px;
+    height: 457px;
+    grid-column: 2/-1;
+    grid-row: 1/4;
+  }
 }
 
 .contacts__call-to-action-button {
@@ -89,5 +131,12 @@
     display: inline-flex;
     margin: 58px auto 57px;
     padding: 5px 39px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    grid-column: 1/2;
+    margin: 0;
+    align-self: end;
+    justify-self: start;
   }
 }

@@ -1,4 +1,10 @@
 .reviews {
+  @media (min-width: $screen-tablet) {
+    position: relative;
+  }
+}
+
+.reviews__wrapper {
   padding-bottom: 61px;
   background-repeat: repeat-x;
   background-image: url("../img/svg/border-wave-slim.svg");
@@ -6,18 +12,23 @@
 
   @media (min-width: $screen-tablet) {
     position: relative;
+
+    padding-top: 82px;
+    padding-bottom: 113px;
+
     background-image: url("../img/bg/review-tablet.jpg"), url("../img/svg/border-wave-bold.svg");
     background-repeat: no-repeat, repeat-x;
     background-position: left -73px bottom 95px, left 8px bottom 10px;
     background-size: contain, auto;
-    padding-top: 82px;
-    padding-bottom: 113px;
   }
-}
 
-.reviews__container {
-  @media (min-width: $screen-tablet) {
-    position: relative;
+  @media (min-width: $screen-desktop) {
+    background-image: url("../img/bg/review-desktop.jpg"), url("../img/svg/border-wave-bold--desktop.svg");
+    background-position: left 0 bottom 95px, left 18px bottom 8px;
+    padding-left: 175px;
+    padding-top: 79px;
+    padding-bottom: 162px;
+    background-size: auto, auto;
   }
 }
 
@@ -36,6 +47,12 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 35px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .reviews__list {
@@ -45,6 +62,10 @@
 
 .reviews__item {
   display: none;
+
+  @media (min-width: $screen-desktop) {
+    padding-right: 60px;
+  }
 
   blockquote {
     margin: 0;
@@ -69,6 +90,10 @@
       display: inline-grid;
       margin-top: 44px;
     }
+
+    @media (min-width: $screen-desktop) {
+      margin-top: 27px;
+    }
   }
 }
 
@@ -86,6 +111,10 @@
     font-size: 18px;
     margin-bottom: 3px;
   }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 17px;
+  }
 }
 
 .reviews__customer-contact {
@@ -97,8 +126,12 @@
   @media (min-width: $screen-tablet) {
     display: inline-flex;
     position: absolute;
-    top: -3px;
+    top: 79px;
     right: 50px;
     padding: 5px 38px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    right: 0;
   }
 }

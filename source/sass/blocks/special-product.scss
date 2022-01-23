@@ -15,12 +15,15 @@
 
   @media (min-width: $screen-desktop) {
     padding-top: 120px;
+    padding-bottom: 100px;
+    background-image: url("../img/svg/border-wave-bold--desktop.svg");
   }
-
 }
 
 .special-product__container {
-  @media (min-width: $screen-desktop) {}
+  @media (min-width: $screen-desktop) {
+    position: relative;
+  }
 }
 
 .special-product__title {
@@ -43,6 +46,9 @@
   @media (min-width: $screen-desktop) {
     font-size: 53px;
     line-height: 57px;
+    padding-left: 175px;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -85,6 +91,12 @@
     right: 77px;
     display: inline-flex;
     text-align: center;
+  }
+
+  @media (min-width: $screen-desktop) {
+    top: 8px;
+    right: initial;
+    left: 96px;
   }
 }
 
@@ -137,6 +149,11 @@
     padding: 17px 10px 25px;
     grid-column: 1/2;
   }
+
+  @media (min-width: $screen-desktop) {
+    align-self: end;
+    padding-bottom: 10px;
+  }
 }
 
 .special-product__characters {
@@ -170,5 +187,9 @@
 .special-product__order-button {
   @media (min-width: $screen-tablet) {
     grid-column: 1/2;
+  }
+
+  @media (min-width: $screen-desktop) {
+    align-self: end;
   }
 }

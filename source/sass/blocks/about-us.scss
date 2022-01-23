@@ -4,7 +4,7 @@
 
   @media (min-width: $screen-tablet) {
     padding-top: 12px;
-    padding-bottom: 62px;
+    padding-bottom: 68px;
   }
 }
 
@@ -19,6 +19,13 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 53px;
+    line-height: 57px;
+    padding: 0 175px;
+    margin-bottom: 37px;
+  }
 }
 
 .about-us__list {
@@ -28,6 +35,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 30px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 0 175px;
   }
 }
 
@@ -44,6 +55,10 @@
     font-size: 20px;
     line-height: 22px;
     padding-top: 41px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    background-position: 0 5px;
   }
 
   &--flower {

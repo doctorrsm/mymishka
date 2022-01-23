@@ -10,8 +10,13 @@
   @media (min-width: $screen-tablet) {
     position: absolute;
     width: 180px;
-    bottom: -37px;
+    bottom: 106px;
     right: 50px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    right: 0;
+    bottom: 155px;
   }
 }
 

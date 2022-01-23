@@ -1,6 +1,7 @@
 .navbar {
   position: relative;
-}
+  z-index: 1;
+} // TODO при нажатой кнопке меню если расширить экран, ломаются стили
 
 .navbar__container {
   @media (max-width: $screen-mobile) {
