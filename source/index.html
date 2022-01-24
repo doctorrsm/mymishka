@@ -2,13 +2,6 @@
 {% set pageName="index" %}
 {% extends "layouts/default.html" %}
 
-{% block head %}
-{% include "partials/head.html" %}
-{% endblock %}
-
-{% block header %}
-{% include "partials/header.html" %}
-{% endblock %}
 {% block content %}
 <section class="hero">
   <div class="container">
@@ -96,7 +89,7 @@
       </li>
     </ul>
   </div>
-</section>
+</section><!-- TODO в слайдере скачает фон при смене картинок -->
 <section class="reviews slider">
   <div class="container">
     <div class="reviews__wrapper">
@@ -131,10 +124,10 @@
         </li>
       </ul>
       <div class="slider__control">
-        <button class="slider__control-button slider__control-button--preview" type="button">
+        <button class="slider__control-button slider__control-button--preview" onclick="previousSlide()" type="button">
           <span class="visually-hidden">Предыдущий слайдер</span>
         </button>
-        <button class="slider__control-button slider__control-button--next" type="button">
+        <button class="slider__control-button slider__control-button--next" onclick="nextSlide()" type="button">
           <span class="visually-hidden">Следующий слайдер</span>
         </button>
       </div>
@@ -164,6 +157,4 @@
 
 {% endblock %}
 
-{% block footer %}
-{% include "partials/footer.html" %}
-{% endblock %}
+

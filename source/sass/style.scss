@@ -2,7 +2,6 @@
 @import "variables/variables";
 @import "mixins/mixins";
 @import "mixins/custom-mixins";
-
 @import "global/global";
 
 // common main blocks
@@ -20,6 +19,10 @@
 @import "blocks/reviews";
 @import "blocks/slider";
 @import "blocks/contacts";
+
+// catalog.html blocks
+
+@import "blocks/catalog";
 
 // common footer blocks
 @import "blocks/social";

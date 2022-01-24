@@ -2,21 +2,29 @@
 {% from "macros/img.html" import img %}
 <!DOCTYPE html>
 <html lang="ru">
-   <head>
-      {% block head %}{% endblock %}
-   </head>
-   <body class="page">
-      <header class="page__header">
-         {% block header %}{% endblock %}
-      </header>
-      <main class="page__main">
-         {% block content %}{% endblock %}
-      </main>
-      <footer class="page__footer">
-        <div class="container page__footer-grid">
-          {% block footer %}{% endblock %}
-        </div>
-        <script src="js/script.js"></script>
-      </footer>
-   </body>
+
+<head>
+  {% include "partials/head.html" %}
+  {% block head %}{% endblock %}
+</head>
+
+<body class="page">
+  <header class="page__header">
+    {% include "partials/header.html" %}
+    {% block header %}
+    {% endblock %}
+  </header>
+  <main class="page__main">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="page__footer">
+    <div class="container page__footer-grid">
+      {% block footer %}
+      {% include "partials/footer.html" %}
+      {% endblock %}
+    </div>
+    <script src="js/script.js"></script>
+  </footer>
+</body>
+
 </html>

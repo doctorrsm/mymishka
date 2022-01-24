@@ -1,0 +1,74 @@
+{% set username="Каталог товаров" %}
+{% set pageName="catalog" %}
+
+{% extends "layouts/inner_page.html" %}
+
+
+{% block content %}
+<div class="container">
+  <div class="catalog">
+    <ul class="catalog__List">
+      <li class="catalog__item">
+        <a class="catalog__img-link" href="#">
+          {{ img("img/shop/hare", "800", "600", "Вязаный зайчик.") }}
+        </a>
+        <div class="catalog__description-wrapper">
+          <a href="#" class="catalog__title-link">
+            <h2 class="catalog__item-title">Зайчик-попрыгайчик</h2>
+          </a>
+          <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
+          <div class="catalog__item-price-wrapper">
+            <span class="catalog__item-price">1 200 руб.</span>
+            <button class="catalog__item-cart-button" type="button">
+              <span class="visually-hidden">Добавить товар в корзину.</span>
+              <svg width="21" height="18" viewBox="0 0 21 18">
+                <use xlink:href="img/svg/sprite.svg#cart"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="catalog__item">
+        <a class="catalog__img-link" href="#">
+          {{ img("img/shop/hare", "800", "600", "Корзинка для белья.") }}
+        </a>
+        <div class="catalog__description-wrapper">
+          <a href="#" class="catalog__title-link">
+            <h2 class="catalog__item-title">Корзинка для белья</h2>
+          </a>
+          <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
+          <div class="catalog__item-price-wrapper">
+            <span class="catalog__item-price">690 руб.</span>
+            <button class="catalog__item-cart-button" type="button">
+              <span class="visually-hidden">Добавить товар в корзину.</span>
+              <svg width="21" height="18" viewBox="0 0 21 18">
+                <use xlink:href="img/svg/sprite.svg#cart"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="catalog__item">
+        <a class="catalog__img-link" href="#">
+          {{ img("img/shop/hare", "800", "600", "Большая корзинка для игрушек.") }}
+        </a>
+        <div class="catalog__description-wrapper">
+          <a href="#" class="catalog__title-link">
+            <h2 class="catalog__item-title">Большая корзинка для игрушек</h2>
+          </a>
+          <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
+          <div class="catalog__item-price-wrapper">
+            <span class="catalog__item-price">1 500 руб.</span>
+            <button class="catalog__item-cart-button" type="button">
+              <span class="visually-hidden">Добавить товар в корзину.</span>
+              <svg width="21" height="18" viewBox="0 0 21 18">
+                <use xlink:href="img/svg/sprite.svg#cart"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
