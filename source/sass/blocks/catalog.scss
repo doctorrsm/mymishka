@@ -1,13 +1,172 @@
 .catalog {
   display: block;
+  padding: 30px 0 58px;
+
+  @media (min-width: $screen-tablet) {
+    padding: 67px 0 64px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 111px 0 105px;
+  }
 }
-.catalog__List { }
-.catalog__item { }
-.catalog__img-link { }
-.catalog__description-wrapper { }
-.catalog__title-link { }
-.catalog__item-title { }
-.catalog__item-description { }
-.catalog__item-price-wrapper { }
-.catalog__item-price { }
-.catalog__item-cart-button { }
+// TODO ! Почему не работает кнопка меню в мобильном на странице каталога?
+.catalog__List {
+  @include list-reset;
+  display: grid;
+  row-gap: 30px;
+
+  @media (min-width: $screen-tablet) {
+    row-gap: 54px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 51px;
+  }
+}
+
+.catalog__item {
+  @media (min-width: $screen-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.catalog__img-link {
+  display: block;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &:focus {
+    outline: 5px solid var(--basic);
+    outline-offset: -5px;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+.catalog__description-wrapper {
+  border: 1px solid var(--border);
+  padding: 5px 27px 1px;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $screen-desktop) {
+    flex-grow: 1;
+  }
+}
+
+.catalog__title-link {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 1px solid var(--basic);
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+.catalog__item-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--black);
+  margin-top: 20px;
+  margin-bottom: 6px;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 20px;
+  }
+}
+
+.catalog__item-description {
+  font-size: 13px;
+  line-height: 30px;
+  color: var(--dark);
+  margin-top: 0;
+  padding-bottom: 5px;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 15px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.catalog__item-price-wrapper {
+  border-top: 1px solid var(--border);
+  padding: 22px 0 26px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $screen-tablet) {
+    margin-top: auto;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-top: auto;
+    padding: 22px 0 22px;
+  }
+}
+
+.catalog__item-price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--black);
+
+  @media (min-width: $screen-tablet) {
+    font-size: 17px;
+  }
+}
+
+.catalog__item-cart-button {
+  @include button-reset;
+
+  svg {
+    fill: #cccccc;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--basic);
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #d1f2eb;
+    }
+  }
+}

@@ -5,6 +5,7 @@
 
 
 {% block content %}
+{{ super() }}
 <div class="container">
   <div class="catalog">
     <ul class="catalog__List">
@@ -30,7 +31,7 @@
       </li>
       <li class="catalog__item">
         <a class="catalog__img-link" href="#">
-          {{ img("img/shop/hare", "800", "600", "Корзинка для белья.") }}
+          {{ img("img/shop/basket", "800", "600", "Корзинка для белья.") }}
         </a>
         <div class="catalog__description-wrapper">
           <a href="#" class="catalog__title-link">
@@ -50,7 +51,7 @@
       </li>
       <li class="catalog__item">
         <a class="catalog__img-link" href="#">
-          {{ img("img/shop/hare", "800", "600", "Большая корзинка для игрушек.") }}
+          {{ img("img/shop/big-basket", "800", "600", "Большая корзинка для игрушек.") }}
         </a>
         <div class="catalog__description-wrapper">
           <a href="#" class="catalog__title-link">
