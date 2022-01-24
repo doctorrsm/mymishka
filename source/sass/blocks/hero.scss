@@ -18,8 +18,9 @@
 
   @media (min-width: $screen-desktop) {
     &::after {
-    background-image: url("../img/svg/bg-wave--desktop.svg");
-  }}
+      background-image: url("../img/svg/bg-wave--desktop.svg");
+    }
+  }
 }
 
 .hero__title-wrapper {

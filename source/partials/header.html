@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="navbar__container container">
     <div class="navbar__main-nav-wrapper">
-      <a class="navbar__logo" href="#" aria-label="Логотип магазина Мишка." role="banner">
+      <a class="navbar__logo" {% if pageName !== 'index' %} href="index.html" {% endif %} aria-label="Логотип магазина Мишка." role="banner">
         <svg class="navbar__logo-mobile" width="86" height="35" viewBox="0 0 86 35">
           <use xlink:href="img/svg/sprite.svg#mishka-logo-mobile"></use>
         </svg>
@@ -14,7 +14,7 @@
       </a>
       <ul class="main-nav">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог товаров</a>
+          <a class="main-nav__link" {% if pageName !== 'catalog' %} href="catalog.html" {% endif %}>Каталог товаров</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Вязание на заказ</a>

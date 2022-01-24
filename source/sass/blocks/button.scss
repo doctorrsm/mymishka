@@ -1,5 +1,6 @@
 .button {
   display: flex;
+  background-color: var(--white);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -11,6 +12,7 @@
   align-items: center;
   border: 2px solid var(--dark);
   min-height: 52px;
+  cursor: pointer;
 
   @media (min-width: $screen-tablet) {
     font-size: 17px;
