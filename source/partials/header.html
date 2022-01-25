@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="navbar__container container">
     <div class="navbar__main-nav-wrapper">
-      <a class="navbar__logo" {% if pageName !== 'index' %} href="index.html" {% endif %} aria-label="Логотип магазина Мишка." role="banner">
+      <a class="navbar__logo" {% if pageName !=='index' %} href="index.html" {% endif %} aria-label="Логотип магазина Мишка." role="banner">
         <svg class="navbar__logo-mobile" width="86" height="35" viewBox="0 0 86 35">
           <use xlink:href="img/svg/sprite.svg#mishka-logo-mobile"></use>
         </svg>
@@ -14,10 +14,10 @@
       </a>
       <ul class="main-nav">
         <li class="main-nav__item">
-          <a class="main-nav__link" {% if pageName !== 'catalog' %} href="catalog.html" {% endif %}>Каталог товаров</a>
+          <a class="main-nav__link" {% if pageName !=='catalog' %} href="catalog.html" {% endif %}>Каталог товаров</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Вязание на заказ</a>
+          <a class="main-nav__link" {% if pageName !=='form' %} href="form.html" {% endif %}>Вязание на заказ</a>
         </li>
         <li class="main-nav__item main-nav__item--desk-visible">
           <a class="main-nav__link" href="#">Новые поступления</a>
@@ -47,11 +47,9 @@
           <span class="navbar__cart-text">Корзина: пока пуста</span>
         </a>
       </li>
-
       <li class="navbar__links-item navbar__text-about-delivery">
-        <p >Бесплатная доставка по России</p>
+        <p>Бесплатная доставка по России</p>
       </li>
     </ul>
-
   </div>
 </nav>

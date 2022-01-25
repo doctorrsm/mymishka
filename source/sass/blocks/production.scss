@@ -1,11 +1,38 @@
 .production {
   display: block;
   padding-bottom: 57px;
+
+  @media (min-width: $screen-tablet) {
+    padding-bottom: 74px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-bottom: 102px;
+  }
 }
 
 .production__wrapper {
   border: 1px solid var(--border);
   padding-bottom: 34px;
+
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: grid;
+    grid-template-columns: 683px 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 0px 37px;
+    grid-template-areas:
+      "video title"
+      "video description"
+      "video button";
+    align-items: start;
+    padding-bottom: 0;
+  }
 }
 
 .production__title {
@@ -22,16 +49,42 @@
 
   @media (min-width: $screen-tablet) {
     font-size: 20px;
+    order: 2;
+    padding: 40px 13px 26px 106px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    grid-area: title;
+    padding: 95px 13px 26px 43px;
+    background-position: left 40px top 46px;
+
+    br {
+      display: initial;
+    }
   }
 }
 
 .production__video-wrapper {
   position: relative;
 
+  width: calc(100% + 2px);
+  margin: 0 -1px;
+
   img {
     display: block;
     width: 100%;
-    margin: 0 -1px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    order: 1;
+  }
+
+  @media (min-width: $screen-desktop) {
+    grid-area: video;
   }
 }
 
@@ -48,7 +101,8 @@
   background-image: url("../img/svg/play.svg");
   transition: 0.2s all;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     transform: translate(-50%, -50%) scale(1.2);
   }
 
@@ -57,7 +111,6 @@
     opacity: 0.3;
     outline: none;
   }
-
 }
 
 .production__description {
@@ -69,10 +122,32 @@
   @media (min-width: $screen-tablet) {
     font-size: 15px;
     line-height: 30px;
+    order: 3;
+    padding: 0 39px 25px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    grid-area: description;
   }
 }
 
 .production__button {
   margin: 0 auto;
   padding: 5px 18px;
+
+  @media (min-width: $screen-tablet) {
+    order: 4;
+    width: calc(100% - 84px);
+  }
+
+  @media (min-width: $screen-desktop) {
+    grid-area: button;
+    margin: 0;
+    margin-left: 41px;
+    margin-top: 13px;
+    width: initial;
+    display: inline-flex;
+    justify-self: start;
+    padding: 5px 42px;
+  }
 }

@@ -1,0 +1,72 @@
+{% set username="Вязание на заказ" %}
+{% set pageName="form" %}
+{% extends "layouts/inner_page.html" %}
+{% block content %}
+{{ super() }}
+<form class="form" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+  <h2 class="visually-hidden">Закажите вязанную продукци, заполнив форму ниже.</h2>
+  <p class="form__caption">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+  <fieldset>
+    <legend>Тип</legend>
+    <p>
+      <input type="radio" id="product-accessory" name="product-type" value="accessory" checked>
+      <label for="product-accessory">Аксессуар для интерьера</label>
+    </p>
+    <p>
+      <input type="radio" id="children-toy" name="product-type" value="children-toy">
+      <label for="children-toy">Детская игрушка</label>
+    </p>
+  </fieldset>
+  <fieldset>
+    <legend>Цвет</legend>
+    <p>
+      <input type="checkbox" id="white-color" name="product-color" value="white" checked>
+      <label for="white-color">Белый</label>
+    </p>
+    <p>
+      <input type="checkbox" id="grey-color" name="product-color" value="grey" checked>
+      <label for="grey-color">Серый</label>
+    </p>
+    <p>
+      <input type="checkbox" id="tiffany -color" name="product-color" value="tiffany ">
+      <label for="tiffany -color">Тиффани</label>
+    </p>
+    <p>
+      <input type="checkbox" id="black-color" name="product-color" value="black">
+      <label for="black-color">Черный</label>
+    </p>
+    <p>
+      <input type="checkbox" id="pink-color" name="product-color" value="pink">
+      <label for="pink-color">Розовый</label>
+    </p>
+    <p>
+      <input type="checkbox" id="orange-color" name="product-color" value="orange">
+      <label for="orange-color">Оранжевый</label>
+    </p>
+  </fieldset>
+  <fieldset>
+    <legend>ФИО</legend>
+    <label>
+      Имя:
+      <input type="text" name="customer-name" placeholder="Введите ваше имя*" required>
+    </label>
+    <label>
+      Фамилия:
+      <input type="text" name="customer-surname" placeholder="Укажите фамилию*" required>
+    </label>
+    <label>
+      Отчество:
+      <input type="text" name="customer-patronymic" placeholder="Отчество, если желаете">
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Телефон</legend>
+    <input type="tel" id="customer-phone" name="customer-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"  pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" required>
+  </fieldset>
+  <fieldset>
+    <legend>e-mail</legend>
+  </fieldset>
+  <button type="submit">Отправить заказ</button>
+  <p>*Поля обязательны для заполнения</p>
+</form>
+{% endblock %}
