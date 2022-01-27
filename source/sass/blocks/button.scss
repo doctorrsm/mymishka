@@ -1,18 +1,18 @@
 .button {
   display: flex;
-  background-color: var(--white);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--dark);
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--dark);
   min-height: 52px;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--dark);
   cursor: pointer;
+  text-transform: uppercase;
+  background-color: var(--white);
+  border: 2px solid var(--dark);
+  text-align: center;
 
   @media (min-width: $screen-tablet) {
     font-size: 17px;

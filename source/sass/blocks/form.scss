@@ -1,5 +1,5 @@
 .form {
-  //@include outline;
+  @include outline;
   padding-bottom: 55px;
 
   fieldset {
@@ -7,6 +7,21 @@
     padding: 0;
     margin: 0;
     margin-bottom: 15px;
+
+    @media (min-width: $screen-tablet) {
+      padding-left: 25%;
+      position: relative;
+      margin-bottom: 0;
+      padding-top: 50px;
+      padding-bottom: 26px;
+    }
+  }
+
+  .form__fieldset-has-one-element {
+    @media (min-width: $screen-tablet) {
+      padding-top: 0;
+      padding-bottom: 26px;
+    }
   }
 
   legend {
@@ -21,6 +36,14 @@
     color: var(--basic);
     text-transform: uppercase;
 
+    @media (min-width: $screen-tablet) {
+      position: absolute;
+      width: 22%;
+      left: 0;
+      top: 66px;
+      margin-bottom: 10px;
+    }
+
     &::after {
       content: "";
       height: 1px;
@@ -28,6 +51,10 @@
       background-color: var(--basic);
       display: inline-flex;
       align-self: center;
+
+      @media (min-width: $screen-tablet) {
+        display: none;
+      }
     }
   }
 
@@ -36,6 +63,10 @@
     font-size: 17px;
     line-height: 18px;
     color: var(--black);
+
+    @media (min-width: $screen-tablet) {
+      font-size: 19px;
+    }
   }
 
   input,
@@ -69,6 +100,11 @@
     border-bottom: 2px solid var(--dark);
     padding: 19px 1px 14px;
 
+    @media (min-width: $screen-tablet) {
+      padding: 12px 1px 14px;
+      padding-left: 18px;
+    }
+
     &:hover,
     &:focus,
     &:active {
@@ -84,13 +120,29 @@
   margin-bottom: 27px;
 
   @media (min-width: $screen-tablet) {
+    padding: 37px 0 0;
     font-size: 17px;
     line-height: 30px;
+    margin-bottom: 14px;
+  }
+}
+
+.form__group-wrapper {
+  @media (min-width: $screen-tablet) {
+    padding: 50px 0 27px;
+
+    legend {
+      top: 17px;
+    }
   }
 }
 
 .form__element {
   margin-top: 0;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 26px;
+  }
 }
 
 .form__element--has-icon {
@@ -107,7 +159,9 @@
     transition: all 0.2s;
   }
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     svg {
       opacity: 1;
       fill: var(--basic);
@@ -118,18 +172,26 @@
 .form__element--no-label:first-of-type {
   margin-top: -29px;
   margin-bottom: 22px;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0;
+  }
 }
 
 .form__icon {
   position: absolute;
   top: 16px;
   right: 3px;
+
+  @media (min-width: $screen-tablet) {
+    top: 10px;
+    right: 23px;
+  }
 }
 
 // radio
-.form__radio-wrapper {
+.form__radio-wrapper {}
 
-}
 .form__radio-wrapper:hover,
 .form__radio-wrapper:focus-within {
   .form__radio-label::before {
@@ -158,6 +220,10 @@
   transition: all 0.2s;
   cursor: pointer;
 
+  @media (min-width: $screen-tablet) {
+    column-gap: 30px;
+  }
+
   &::before {
     content: "";
     display: inline-flex;
@@ -166,6 +232,11 @@
     border: 2px solid var(--dark);
     border-radius: 50%;
     transition: all 0.2s;
+
+    @media (min-width: $screen-tablet) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &::after {
@@ -179,14 +250,31 @@
     background-color: var(--basic);
     border-radius: 50%;
     transition: all 0.2s;
+
+    @media (min-width: $screen-tablet) {
+      height: 20px;
+      width: 20px;
+      top: 15px;
+      left: 15px;
+    }
   }
 }
 
 // checkbox
+.form__checbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .form__checkbox-wrapper {
   margin: 0;
   margin-bottom: 19px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 24px;
+  }
 }
+
 .form__checkbox-wrapper:hover,
 .form__checkbox-wrapper:focus-within {
   .form__checkbox-label::before {
@@ -215,6 +303,10 @@
   transition: all 0.2s;
   cursor: pointer;
 
+  @media (min-width: $screen-tablet) {
+    column-gap: 28px;
+  }
+
   &::before {
     content: "";
     display: inline-flex;
@@ -222,6 +314,11 @@
     height: 40px;
     border: 2px solid var(--dark);
     transition: all 0.2s;
+
+    @media (min-width: $screen-tablet) {
+      width: 52px;
+      height: 52px;
+    }
   }
 
   &::after {
@@ -236,6 +333,12 @@
     background-position: center;
     background-image: url("../img/svg/tick.svg");
     transition: all 0.2s;
+
+    @media (min-width: $screen-tablet) {
+      width: 32px;
+      height: 22px;
+      background-size: contain;
+    }
   }
 }
 
@@ -244,6 +347,13 @@
 .form__text-wrapper {
   display: grid;
   margin-bottom: 21px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 26px;
+    grid-template-columns: auto 1fr;
+    column-gap: 24px;
+    align-items: center;
+  }
 }
 
 
@@ -269,7 +379,7 @@
 .form__footer-wrapper {}
 
 .form__button {
-width: 100%;
+  width: 100%;
 }
 
 // form-text
