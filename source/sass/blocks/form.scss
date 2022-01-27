@@ -1,5 +1,20 @@
 .form {
+  //@include outline;
+  padding-bottom: 55px;
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
   legend {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    width: 100%;
+    margin-bottom: 30px;
     font-size: 17px;
     line-height: 16px;
     font-weight: 700;
@@ -9,9 +24,10 @@
     &::after {
       content: "";
       height: 1px;
-      width: 10px;
+      width: 100%;
       background-color: var(--basic);
       display: inline-flex;
+      align-self: center;
     }
   }
 
@@ -22,10 +38,12 @@
     color: var(--black);
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 17px;
     line-height: 18px;
     color: var(--dark);
+    transition: all 0.2s;
 
     @media (min-width: $screen-tablet) {
       font-size: 19px;
@@ -49,6 +67,7 @@
     border: none;
     outline: none;
     border-bottom: 2px solid var(--dark);
+    padding: 19px 1px 14px;
 
     &:hover,
     &:focus,
@@ -61,6 +80,8 @@
 .form__caption {
   font-size: 13px;
   line-height: 24px;
+  padding: 3px 0;
+  margin-bottom: 27px;
 
   @media (min-width: $screen-tablet) {
     font-size: 17px;
@@ -68,7 +89,47 @@
   }
 }
 
+.form__element {
+  margin-top: 0;
+}
+
+.form__element--has-icon {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  input {
+    padding-right: 40px;
+  }
+
+  svg {
+    opacity: 0.2;
+    transition: all 0.2s;
+  }
+
+  &:hover, &:focus, &:active {
+    svg {
+      opacity: 1;
+      fill: var(--basic);
+    }
+  }
+}
+
+.form__element--no-label:first-of-type {
+  margin-top: -29px;
+  margin-bottom: 22px;
+}
+
+.form__icon {
+  position: absolute;
+  top: 16px;
+  right: 3px;
+}
+
 // radio
+.form__radio-wrapper {
+
+}
 .form__radio-wrapper:hover,
 .form__radio-wrapper:focus-within {
   .form__radio-label::before {
@@ -122,7 +183,10 @@
 }
 
 // checkbox
-
+.form__checkbox-wrapper {
+  margin: 0;
+  margin-bottom: 19px;
+}
 .form__checkbox-wrapper:hover,
 .form__checkbox-wrapper:focus-within {
   .form__checkbox-label::before {
@@ -162,12 +226,12 @@
 
   &::after {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 11px;
+    left: 9px;
     display: none;
     content: "";
-    height: 22px;
-    width: 32px;
+    height: 16px;
+    width: 23px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../img/svg/tick.svg");
@@ -179,16 +243,20 @@
 
 .form__text-wrapper {
   display: grid;
+  margin-bottom: 21px;
 }
 
 
 // textarea
 
 .form__text-area {
-  width: 100%;
   min-height: 142px;
+  width: 100%;
+  margin-top: -10px;
+  font-family: inherit;
   border: 2px solid var(--dark);
   outline: none;
+  padding: 15px;
 
   &:hover,
   &:focus,
@@ -198,8 +266,10 @@
 }
 
 
-.form__footer-wrapper {
+.form__footer-wrapper {}
 
+.form__button {
+width: 100%;
 }
 
 // form-text
@@ -207,6 +277,7 @@
 .form__text {
   font-size: 14px;
   line-height: 16px;
+  margin-bottom: 26px;
 
   @media (min-width: $screen-tablet) {
     font-size: 17px;
