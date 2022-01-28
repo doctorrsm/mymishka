@@ -2,6 +2,10 @@
   @include outline;
   padding-bottom: 55px;
 
+  @media (min-width: $screen-tablet) {
+    padding-bottom: 18px;
+  }
+
   fieldset {
     border: none;
     padding: 0;
@@ -376,10 +380,23 @@
 }
 
 
-.form__footer-wrapper {}
+.form__footer-wrapper {
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+}
 
 .form__button {
   width: 100%;
+
+  @media (min-width: $screen-tablet) {
+    order: 1;
+    width: initial;
+    padding: 5px 30px;
+  }
 }
 
 // form-text
@@ -392,5 +409,6 @@
   @media (min-width: $screen-tablet) {
     font-size: 17px;
     line-height: 30px;
+    order: 2;
   }
 }
