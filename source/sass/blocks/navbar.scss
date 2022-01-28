@@ -1,7 +1,9 @@
 .navbar {
   position: relative;
   z-index: 1;
-} // TODO при нажатой кнопке меню если расширить экран, ломаются стили
+}
+
+// TODO при нажатой кнопке меню если расширить экран, ломаются стили
 
 .navbar__container {
   @media (max-width: $screen-mobile) {
@@ -106,7 +108,13 @@
 }
 
 .navbar__links-wrapper--visible {
-  display: block;
+  @media (max-width: ($screen-tablet - 1px)) {
+    display: block;
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    right: 0;
+  }
 }
 
 
@@ -243,8 +251,9 @@
   @include button-reset;
   position: absolute;
   z-index: 1;
-  top: 32px;
-  right: 31px;
+  padding: 20px;
+  top: 20px;
+  right: 22px;
   width: 20px;
   height: 14px;
   background-image: url("../img/svg/menu.svg");

@@ -18,13 +18,13 @@
 
     background-image: url("../img/bg/review-tablet.jpg"), url("../img/svg/border-wave-bold.svg");
     background-repeat: no-repeat, repeat-x;
-    background-position: left -73px bottom 95px, left 8px bottom 10px;
+    background-position: left -73px top 0, left 8px bottom 10px;
     background-size: contain, auto;
   }
 
   @media (min-width: $screen-desktop) {
     background-image: url("../img/bg/review-desktop.jpg"), url("../img/svg/border-wave-bold--desktop.svg");
-    background-position: left 0 bottom 95px, left 18px bottom 8px;
+    background-position: left 0 top 0, left 18px bottom 8px;
     padding-left: 175px;
     padding-top: 79px;
     padding-bottom: 162px;

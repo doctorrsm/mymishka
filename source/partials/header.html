@@ -1,55 +1,57 @@
 <nav class="navbar">
-  <div class="navbar__container container">
-    <div class="navbar__main-nav-wrapper">
-      <a class="navbar__logo" {% if pageName !=='index' %} href="index.html" {% endif %} aria-label="Логотип магазина Мишка." role="banner">
-        <svg class="navbar__logo-mobile" width="86" height="35" viewBox="0 0 86 35">
-          <use xlink:href="img/svg/sprite.svg#mishka-logo-mobile"></use>
-        </svg>
-        <svg class="navbar__logo-tablet" width="114" height="46" viewBox="0 0 114 46">
-          <use xlink:href="img/svg/sprite.svg#mishka-logo-tablet"></use>
-        </svg>
-        <svg class="navbar__logo-desktop" width="149" height="72" viewBox="0 0 149 72">
-          <use xlink:href="img/svg/sprite.svg#mishka-logo-desktop"></use>
-        </svg>
-      </a>
-      <ul class="main-nav">
-        <li class="main-nav__item">
-          <a class="main-nav__link" {% if pageName !=='catalog' %} href="catalog.html" {% endif %}>Каталог товаров</a>
+  <div class="container">
+    <div class="navbar__container">
+      <div class="navbar__main-nav-wrapper">
+        <a class="navbar__logo" {% if pageName !=='index' %} href="index.html" {% endif %} aria-label="Логотип магазина Мишка." role="banner">
+          <svg class="navbar__logo-mobile" width="86" height="35" viewBox="0 0 86 35">
+            <use xlink:href="img/svg/sprite.svg#mishka-logo-mobile"></use>
+          </svg>
+          <svg class="navbar__logo-tablet" width="114" height="46" viewBox="0 0 114 46">
+            <use xlink:href="img/svg/sprite.svg#mishka-logo-tablet"></use>
+          </svg>
+          <svg class="navbar__logo-desktop" width="149" height="72" viewBox="0 0 149 72">
+            <use xlink:href="img/svg/sprite.svg#mishka-logo-desktop"></use>
+          </svg>
+        </a>
+        <ul class="main-nav">
+          <li class="main-nav__item">
+            <a class="main-nav__link" {% if pageName !=='catalog' %} href="catalog.html" {% endif %}>Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" {% if pageName !=='form' %} href="form.html" {% endif %}>Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item main-nav__item--desk-visible">
+            <a class="main-nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item main-nav__item--desk-visible">
+            <a class="main-nav__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <button class="navbar__close-button" type="button">
+          <span class="visually-hidden">Нажмите для доступа к меню.</span>
+        </button>
+      </div>
+      <ul class="navbar__links-wrapper">
+        <li class="navbar__links-item navbar__links-item--search">
+          <a class="navbar__search-link" href="#">
+            <svg width="18" height="18" viewBox="0 0 18 18">
+              <use xlink:href="img/svg/sprite.svg#search"></use>
+            </svg>
+            <span>Поиск по сайту</span>
+          </a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" {% if pageName !=='form' %} href="form.html" {% endif %}>Вязание на заказ</a>
+        <li class="navbar__links-item navbar__cart">
+          <a class="navbar__cart-link" href="#">
+            <svg width="21" height="18" viewBox="0 0 21 18">
+              <use xlink:href="img/svg/sprite.svg#cart"></use>
+            </svg>
+            <span class="navbar__cart-text">Корзина: пока пуста</span>
+          </a>
         </li>
-        <li class="main-nav__item main-nav__item--desk-visible">
-          <a class="main-nav__link" href="#">Новые поступления</a>
-        </li>
-        <li class="main-nav__item main-nav__item--desk-visible">
-          <a class="main-nav__link" href="#">Распродажа</a>
+        <li class="navbar__links-item navbar__text-about-delivery">
+          <p>Бесплатная доставка по России</p>
         </li>
       </ul>
-      <button class="navbar__close-button" type="button">
-        <span class="visually-hidden">Нажмите для доступа к меню.</span>
-      </button>
     </div>
-    <ul class="navbar__links-wrapper">
-      <li class="navbar__links-item navbar__links-item--search">
-        <a class="navbar__search-link" href="#">
-          <svg width="18" height="18" viewBox="0 0 18 18">
-            <use xlink:href="img/svg/sprite.svg#search"></use>
-          </svg>
-          <span>Поиск по сайту</span>
-        </a>
-      </li>
-      <li class="navbar__links-item navbar__cart">
-        <a class="navbar__cart-link" href="#">
-          <svg width="21" height="18" viewBox="0 0 21 18">
-            <use xlink:href="img/svg/sprite.svg#cart"></use>
-          </svg>
-          <span class="navbar__cart-text">Корзина: пока пуста</span>
-        </a>
-      </li>
-      <li class="navbar__links-item navbar__text-about-delivery">
-        <p>Бесплатная доставка по России</p>
-      </li>
-    </ul>
   </div>
 </nav>

@@ -109,10 +109,24 @@
 .contacts__map {
   width: calc(100% + 60px);
   margin: 0 -30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/site/map-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/site/map-mobileg@2x.png");
+  }
+
 
   @media (min-width: $screen-tablet) {
     width: calc(100% + 100px);
     margin: 0 -50px;
+    background-image: url("../img/site/map-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/site/map-tablet@2x.png");
+    }
   }
 
   @media (min-width: $screen-desktop) {
@@ -121,6 +135,11 @@
     height: 457px;
     grid-column: 2/-1;
     grid-row: 1/4;
+    background-image: url("../img/site/map-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/site/map-desktop@2x.png");
+    }
   }
 }
 

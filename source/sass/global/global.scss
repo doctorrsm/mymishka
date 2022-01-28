@@ -2,7 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /*outline: 1px solid green;*/
+  outline: 1px solid green;
+  outline-offset: 4px;
 }
 
 html {

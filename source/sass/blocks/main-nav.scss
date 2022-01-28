@@ -13,7 +13,19 @@
 }
 
 .main-nav--visible {
-  display: block;
+  @media (max-width: ($screen-tablet - 1px)) {
+    display: block;
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    right: 0;
+  }
+}
+
+.main-nav--no-js {
+  @media (max-width: ($screen-tablet - 1px)) {
+    display: block;
+  }
 }
 
 .main-nav__item {

@@ -1,6 +1,7 @@
 .form {
   @include outline;
   padding-bottom: 55px;
+  overflow-x: hidden;
 
   @media (min-width: $screen-tablet) {
     padding-bottom: 18px;
@@ -18,6 +19,11 @@
       margin-bottom: 0;
       padding-top: 50px;
       padding-bottom: 26px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      padding-left: calc(100% / 6);
+      padding-right: calc(100% / 6);
     }
   }
 
@@ -80,6 +86,11 @@
     color: var(--dark);
     transition: all 0.2s;
 
+    &:invalid {
+      border-color: #e8697e;
+      outline-color: #e8697e;
+    }
+
     @media (min-width: $screen-tablet) {
       font-size: 19px;
     }
@@ -114,6 +125,10 @@
     &:active {
       border-color: var(--basic);
     }
+
+    &:invalid {
+      border-color: #e8697e;
+    }
   }
 }
 
@@ -128,6 +143,31 @@
     font-size: 17px;
     line-height: 30px;
     margin-bottom: 14px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 81px 16.66% 10px;
+    margin-bottom: 0;
+  }
+}
+
+.form__dark-bg {
+  @media (min-width: $screen-tablet) {
+    position: relative;
+
+    input {
+      background-color: transparent;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #f1f1f1;
+      top: 0;
+      right: -50vw;
+      bottom: 0;
+      left: -50vw;
+    }
   }
 }
 
@@ -191,6 +231,11 @@
     top: 10px;
     right: 23px;
   }
+
+  @media (min-width: $screen-desktop) {
+    top: 16px;
+    right: 8px;
+  }
 }
 
 // radio
@@ -212,6 +257,17 @@
 .form__radio-wrapper {
   input:checked~.form__radio-label::after {
     display: inline-flex;
+  }
+
+  input:disabled~.form__radio-label,
+  input:disabled~.form__radio-label:hover,
+  input:disabled~.form__radio-label:focus {
+    pointer-events: none;
+    opacity: 0.3;
+
+    &::before {
+      border-color: var(--border);
+    }
   }
 }
 
@@ -267,7 +323,16 @@
 // checkbox
 .form__checbox-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+
+  @media (min-width: $screen-tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $screen-desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: -86px;
+  }
 }
 
 .form__checkbox-wrapper {
@@ -296,6 +361,18 @@
   input:checked~.form__checkbox-label::after {
     display: inline-flex;
   }
+
+  input:disabled~.form__checkbox-label,
+  input:disabled~.form__checkbox-label:hover,
+  input:disabled~.form__checkbox-label:focus {
+    pointer-events: none;
+    opacity: 0.3;
+
+    &::before {
+      border-color: var(--border);
+    }
+  }
+
 }
 
 .form__checkbox-label {
@@ -386,6 +463,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 20px 16.66%;
   }
 }
 

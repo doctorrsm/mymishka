@@ -120,6 +120,10 @@
 }
 
 .special-product__image-wrapper {
+  img {
+    width: 100%;
+  }
+
   @media (min-width: $screen-tablet) {
     grid-column: 2/3;
     grid-row: -1/-5;

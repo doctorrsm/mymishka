@@ -17,14 +17,19 @@
   <main class="page__main">
     {% block content %}{% endblock %}
   </main>
+  {% block footer %}
   <footer class="page__footer">
     <div class="container page__footer-grid">
-      {% block footer %}
+
       {% include "partials/footer.html" %}
-      {% endblock %}
+
+
     </div>
+
     <script src="js/script.js"></script>
   </footer>
+  {% include "partials/modal.html" %}
+  {% endblock %}
 </body>
 
 </html>

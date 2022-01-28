@@ -1,0 +1,32 @@
+{% if pageName == "index" %}
+<form class="page__modal modal" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+  <div class="modal__content-wrapper">
+    <h2 class="modal__title">Добавить
+      <br aria-hidden="true"> в корзину</h2>
+    <p class="modal__text">Выберите размер:</p>
+    <ul class="modal__list">
+      <li class="modal__item">
+        <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size--small" value="small" checked>
+        <label class="modal__item-label" for="product-size--small">s <span class="visually-hidden">Размер S</span>
+        </label>
+      </li>
+      <li class="modal__item">
+        <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size--medium" value="medium">
+        <label class="modal__item-label" for="product-size--medium">m <span class="visually-hidden">Размер M</span>
+        </label>
+      </li>
+      <li class="modal__item">
+        <input class="modal__radio-input visually-hidden" type="radio" name="product-size" id="product-size--large" value="large">
+        <label class="modal__item-label" for="product-size--large">l <span class="visually-hidden">Размер L</span>
+        </label>
+      </li>
+    </ul>
+    <button class="button modal__button" type="submit">Добавить</button>
+  </div>
+
+</form>
+{% elseif pageName == "catalog" %}
+Контент для страницы контакты
+{% else %}
+
+{% endif %}
