@@ -2,7 +2,8 @@
   <div class="container">
     <div class="navbar__container navbar__container--no-js">
       <div class="navbar__main-nav-wrapper">
-        <a class="navbar__logo" {% if pageName !=='index' %} href="index.html" {% endif %} aria-label="Логотип магазина Мишка." role="banner">
+        <a class="navbar__logo" {% if pageName !=='index' %} href="index.html" {% endif %}>
+          <span class="visually-hidden">Логотип магазина Мишка.</span>
           <svg class="navbar__logo-mobile" width="86" height="35" viewBox="0 0 86 35">
             <use xlink:href="img/svg/sprite.svg#mishka-logo-mobile"></use>
           </svg>
