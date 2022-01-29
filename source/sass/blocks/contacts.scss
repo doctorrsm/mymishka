@@ -1,8 +1,6 @@
 .contacts {
   padding-top: 28px;
 
-  @include outline;
-
   @media (min-width: $screen-desktop) {
     padding-bottom: 105px;
   }
