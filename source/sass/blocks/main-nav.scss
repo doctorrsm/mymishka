@@ -75,6 +75,10 @@
     opacity: 0.6;
   }
 
+  &:focus:not(:active) {
+    outline: 2px solid var(--basic);
+  }
+
   &:active {
     opacity: 0.3;
   }

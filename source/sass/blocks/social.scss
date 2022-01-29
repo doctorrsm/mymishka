@@ -26,6 +26,10 @@
     }
   }
 
+  &:focus:not(:active) {
+    outline: 2px solid var(--basic);
+  }
+
   &:active {
     svg {
       fill: #46c1ae;

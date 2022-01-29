@@ -1,6 +1,7 @@
 .navbar {
   position: relative;
   z-index: 1;
+  min-height: 80px;
 }
 
 // TODO при нажатой кнопке меню если расширить экран, ломаются стили
@@ -17,6 +18,43 @@
 
   @media (min-width: $screen-desktop) {
     grid-template-columns: 4/6*100% 1fr;
+  }
+}
+
+.navbar__container--visible {
+  @media (max-width: ($screen-tablet - 1px)) {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    background-color: var(--white);
+
+    .navbar__main-nav {
+      display: block;
+    }
+
+    .navbar__links-wrapper {
+      display: block;
+    }
+  }
+}
+
+.navbar__container--no-js {
+  @media (max-width: ($screen-tablet - 1px)) {
+    left: 30px;
+    right: 30px;
+    background-color: var(--white);
+
+    .navbar__main-nav {
+      display: block;
+    }
+
+    .navbar__links-wrapper {
+      display: block;
+    }
+
+    .navbar__close-button {
+      display: none;
+    }
   }
 }
 
@@ -158,6 +196,10 @@
     opacity: 0.6;
   }
 
+  &:focus:not(:active) {
+    outline: 2px solid var(--basic);
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -205,6 +247,10 @@
   &:hover,
   &:focus {
     opacity: 0.6;
+  }
+
+  &:focus:not(:active) {
+    outline: 2px solid var(--basic);
   }
 
   &:active {
